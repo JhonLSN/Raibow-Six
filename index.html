@@ -1,45 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seleção de times</title>
+    <title>Seleção de Times</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d5e65723a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header">
-        <h1>Seleção de Time - Rainbow Six Siege</h1>
-        <hr>
-        <p>A ferramenta tem como objetivo formar times com nomes de forma aleatória. <br> Lembre-se que a ferramenta foi criada com o intuito de ajudar todos os membros e caso haja desconfiaça da mesma você tem o total direito e obrigação de olhar o código fonte da página!</p>
+        <hr id="one">
+        <h1>SELEÇÃO DE TIMES</h1>
+        <p>A ferramenta tem como objetivo formar times com nomes de forma aleatória.<br>Lembre-se que a ferramenta foi criada com o intuito de ajudar todos os membros e que, no momento, serve para dois times com 5 membros cada um.</p>
+        <hr id="two">
     </header>
     <section class="main">
         <div class="main-input">
-            <label for="name">Nome do jogador</label>
+            <label>INSIRA O NOME DO JOGADOR</label>
             <input type="text" id="name-of-player">
         </div>
         <div class="button">            
-            <button onclick="add()">Adicionar</button>
-            <button onclick="list()">Listar</button>
-            <button onclick="clean()">Limpar</button>
+            <button onclick="add()"><i class="fas fa-user-plus"></i> ADICIONAR</button>
+            <button onclick="list()"><i class="fas fa-clipboard-list"></i> LISTAR</button>
+            <button onclick="clean()"><i class="fas fa-eraser"></i> LIMPAR</button>
         </div>
         <div class="list">
-            <label for="name">Jogadores</label>
-            <textarea name="mensagem" id="result-list" cols="1" rows="10"></textarea>
+            <label for="name">JOGADORES</label>
+            <h2 id="result-list"></h2>
         </div>
         <div class="button-result">            
-            <button onclick="generateTeams()">Gerar times</button>
+            <button onclick="generateTeams()">GERAR TIMES</button>
         </div>
         <div class="result">
             <div class="result-team-a">
                 <label for="name">TIME LARANJA</label>
-                <textarea name="mensagem" id="result-a" cols="30" rows="10"></textarea>
+                <h2 id="result-a"></h2>
             </div>
             <div class="result-team-b">
                 <label for="name">TIME AZUL</label>
-                <textarea name="mensagem" id="result-b" cols="40" rows="15"></textarea>
+                <h2 id="result-b"></h2>
             </div>
-        </div>
     </section>
     <footer class="footer">
         &copy; by Jhonatan Luan dos Santos

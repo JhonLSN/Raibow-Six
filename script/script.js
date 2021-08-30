@@ -1,8 +1,8 @@
 var arrayPlays = []
 var players = document.querySelector('input#name-of-player')
-var resultList = document.querySelector('textarea#result-list')
-var resultTeamA = document.querySelector('textarea#result-a')
-var resultTeamB = document.querySelector('textarea#result-b')
+var resultList = document.querySelector('h2#result-list')
+var resultTeamA = document.querySelector('h2#result-a')
+var resultTeamB = document.querySelector('h2#result-b')
 
 function add(){
 
@@ -25,7 +25,7 @@ function list(){
     resultList.innerHTML = ''
     
     for(var i=0;i<arrayPlays.length;i++){
-        resultList.innerHTML += `O jogador ${arrayPlays[i]} foi adicionado!\n`
+        resultList.innerHTML += `O jogador ${arrayPlays[i]} foi adicionado!<br>`
     }
     
     
@@ -50,11 +50,11 @@ function generateTeams(){
     }
 
     for(var i = 0; i<5; i++){
-        resultTeamA.innerHTML += `O ${i+1}º Jogador é: ${result[i]}\n`
+        resultTeamA.innerHTML += `O ${i+1}º Jogador é: ${result[i]}<br>`
     }
 
     for(var i = 5; i<10; i++){
-        resultTeamB.innerHTML += `O ${i+1}º Jogador é: ${result[i]}\n`
+        resultTeamB.innerHTML += `O ${i+1}º Jogador é: ${result[i]}<br>`
     }
 
 }
