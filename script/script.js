@@ -1,34 +1,30 @@
 var arrayPlays = []
-var players = document.querySelector('input#name-of-player')
-var resultList = document.querySelector('h2#result-list')
-var resultTeamA = document.querySelector('h2#result-a')
-var resultTeamB = document.querySelector('h2#result-b')
+var players = document.querySelector('input.main__input__name-of-player')
+var resultList = document.querySelector('h2.main__list__result-list')
+var resultTeamA = document.querySelector('h2.main__result__team-a__result-a')
+var resultTeamB = document.querySelector('h2.main__result__team-b__result-b')
 
 function add(){
-
     if(players.value == ''){
         alert(`Campos em branco não são permitidos!!`)
         return
     }
-
+    
     arrayPlays.push(players.value)
     players.value = ''
 }
 
 function list(){
-
     if(arrayPlays == 0){
         alert(`Não há nada para ser listado!\nAdicione, no mínimo, um nome.`)
         return
     }
-
-    resultList.innerHTML = ''
     
+    resultList.innerHTML = ''
+
     for(var i=0;i<arrayPlays.length;i++){
         resultList.innerHTML += `O jogador ${arrayPlays[i]} foi adicionado!<br>`
-    }
-    
-    
+    }    
 }
 
 function clean(){
@@ -37,15 +33,11 @@ function clean(){
 }
 
 function generateTeams(){
-
     const result = []
 
     while(arrayPlays.length){
-
-        const index = Math.floor(Math.random() * arrayPlays.length - 1);
-    
-        const [nome] = arrayPlays.splice(index, 1);
-    
+        const index = Math.floor(Math.random() * arrayPlays.length - 1);    
+        const [nome] = arrayPlays.splice(index, 1);    
         result.push(nome);
     }
 
@@ -56,10 +48,7 @@ function generateTeams(){
     for(var i = 5; i<10; i++){
         resultTeamB.innerHTML += `O ${i+1}º Jogador é: ${result[i]}<br>`
     }
-
 }
-
-
 
 /*const nomes = ['Giovanne', 'Erikys', 'Lucas', 'Natanael', 'Vania', 'Luana', 'Maria', 'Jhonatan', 'Carlos', 'Edleine']
 

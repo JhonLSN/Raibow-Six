@@ -13,36 +13,36 @@
 </head>
 <body>
     <header class="header">
-        <hr id="one">
-        <h1>SELEÇÃO DE TIMES</h1>
-        <p>A ferramenta tem como objetivo formar times com nomes de forma aleatória.<br>Lembre-se que a ferramenta foi criada com o intuito de ajudar todos os membros e que, no momento, serve para dois times com 5 membros cada um.</p>
-        <hr id="two">
+        <hr class="header__hr-one">
+        <h1 class="header__title">SELEÇÃO DE TIMES</h1>
+        <p class="header__paragraph">A ferramenta tem como objetivo formar times com nomes de forma aleatória.<br>Lembre-se que a ferramenta foi criada com o intuito de ajudar todos os membros e que, no momento, serve para dois times com 5 membros cada um.</p>
+        <hr class="header__hr-two">
     </header>
     <section class="main">
-        <div class="main-input">
+        <div class="main__input">
             <label>INSIRA O NOME DO JOGADOR</label>
-            <input type="text" id="name-of-player">
+            <input type="text" class="main__input__name-of-player">
         </div>
-        <div class="button">            
+        <div class="main__button">            
             <button onclick="add()"><i class="fas fa-user-plus"></i> ADICIONAR</button>
             <button onclick="list()"><i class="fas fa-clipboard-list"></i> LISTAR</button>
             <button onclick="clean()"><i class="fas fa-eraser"></i> LIMPAR</button>
         </div>
-        <div class="list">
+        <div class="main__list">
             <label for="name">JOGADORES</label>
-            <h2 id="result-list"></h2>
+            <h2 class="main__list__result-list"></h2>
         </div>
-        <div class="button-result">            
+        <div class="main__button-result">            
             <button onclick="generateTeams()">GERAR TIMES</button>
         </div>
-        <div class="result">
-            <div class="result-team-a">
+        <div class="main__result">
+            <div class="main__result__team-a">
                 <label for="name">TIME LARANJA</label>
-                <h2 id="result-a"></h2>
+                <h2 class="main__result__team-a__result-a"></h2>
             </div>
-            <div class="result-team-b">
+            <div class="main__result__team-b">
                 <label for="name">TIME AZUL</label>
-                <h2 id="result-b"></h2>
+                <h2 class="main__result__team-b__result-b"></h2>
             </div>
     </section>
     <footer class="footer">

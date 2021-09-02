@@ -1,31 +1,5 @@
 *{margin: 0; padding: 0; font-family: 'IBM Plex Sans Thai Looped', sans-serif;}
 
-hr{
-    outline: none;
-    border: none;
-    background: #00e1ff;
-    height: 4px;
-    border-radius: 3px;
-}
-
-hr#one{
-    width: 70%;
-    margin-bottom: 20px;
-}
-
-hr#two{
-    width: 30%;
-    margin-top: 20px;
-}
-
-p{
-    width: 70%;
-}
-
-body{
-    background: white;
-}
-
 .header{
     display: flex;
     flex-direction: column;
@@ -34,19 +8,55 @@ body{
     text-align: center;
 }
 
+hr{
+    outline: none;
+    border: none;
+    background: #00e1ff;
+    height: 4px;
+    border-radius: 3px;
+}
+
+.header__hr-one{
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.header__paragraph{
+    width: 70%;
+}
+
+.header__hr-two{
+    width: 30%;
+    margin-top: 20px;
+}
+
 .main{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.main-input{
+.main__input{
     display: flex;
     flex-direction: column;
 }
 
+label{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.main__input__name-of-player{
+    outline: none;
+    border: 2px solid #00e1ff;
+    border-radius: 7px;
+    height: 40px;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
 @media screen and (max-width: 700px){
-    .main-input{
+    .main__input{
         text-align: center;
         align-items: center;
     }
@@ -69,20 +79,6 @@ body{
     }
 }
 
-label{
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-input{
-    outline: none;
-    border: 2px solid #00e1ff;
-    border-radius: 7px;
-    height: 40px;
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-}
-
 button{
     outline: none;
     border: 1px solid;
@@ -97,11 +93,11 @@ button:hover{
     background: #00e1ffc7;
 }
 
-.button button{
+.main__button button{
     margin-right: 10px;
 }
 
-.button button:last-child{
+.main__button button:last-child{
     margin-right:0;
 }
 
@@ -110,29 +106,43 @@ i{
     font-size: 1.2rem;
 }
 
-.list{
+@media screen and (max-width: 700px){
+    button{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    button:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.main__list{
     margin: 20px 0;
     text-align: center;
 }
 
-.result{
+.main__result{
     display: flex;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
-.result-team-a{
+.main__result__team-a{
     margin-right: 50px;
 }
 
 @media screen and (max-width: 700px) {
-    .result{
+    .main__result{
         display: flex;
         flex-direction: column;
     }
 
-    .result-team-a, .result-team-b{
+    .main__result__team-a, .main__result__team-b{
         text-align: center;
         margin-right: 0;
     }
